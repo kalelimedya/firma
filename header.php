@@ -14,7 +14,6 @@
         <link rel="stylesheet" href="css/fontawesome-all.min.css">
         <link rel="stylesheet" href="css/flaticon.css">
         <link rel="stylesheet" href="css/aos.css">
-        <link rel="stylesheet" href="css/carousel.css">
         <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/slick.css">
         <link rel="stylesheet" href="css/jquery.fancybox.min.css">
@@ -44,16 +43,16 @@
      
         <!--  ====== header-area-start=======================================  -->
         <header>
-            <div id="header-sticky" class="transparent-header header-area">
+            <div id="header-sticky" class="transparent-header home6 header-area">
                 <div class="header">
                     <div class="container">
                         <div class="row align-items-center justify-content-between position-relative">
                             <div class="col-xl-2 col-lg-2 col-md-3 col-sm-5 col-6">
                                 <div class="logo">
-                                    <a href="index.html" class="d-block"><img src="images/logo/logo.png" alt="Evalo"></a>
+                                    <a href="index.html" class="d-inline-block"><img src="images/logo/logo.png" alt="Evalo"></a>
                                 </div>
                             </div><!-- /col -->
-                            <div class="col-xl-7 col-lg-7 col-md-1 col-sm-1 col-1 d-none d-lg-flex justify-content-end position-static">
+                            <div class="col-xl-7 col-lg-7 col-md-1 col-sm-1 col-1 d-none d-lg-flex justify-content-end position-static pr-0">
                                 <div class="main-menu">
                                     <nav id="mobile-menu">
                                         <ul class="d-block">
@@ -221,21 +220,15 @@
                                     </nav>
                                 </div><!-- /main-menu -->
                             </div><!-- /col -->
-                            <div class="col-xl-3  col-lg-3 col-md-6 col-sm-6 col-4 pl-lg-0 pl-xl-3">
-                                <div class="header-right d-flex align-items-center justify-content-lg-between justify-content-end">
-                                    <ul class="header-login d-none d-lg-block">
-                                        <li>
-                                            <a class="black-color f-700 black-color" href="login.html" data-toggle="tooltip" data-selector="true" data-placement="bottom" title="Login / Register">
-                                            Login</a>
-                                        </li>
-                                    </ul>
-                                    <div class="my-btn ml-20 d-none d-sm-block">
-                                        <a href="login.html" class="btn theme-bg text-capitalize">Sign Up</a>
+                            <div class="col-xl-3  col-lg-3 col-md-6 col-sm-6 col-4">
+                                <div class="header-right d-flex align-items-center justify-content-end">
+                                    <div class="my-btn d-none d-md-block">
+                                        <a href="contact-us.html" class="btn transparent-bg text-capitalize">Get A Quote</a>
                                     </div><!-- /my-btn -->
                                     <div class="d-block d-lg-none pl-20">
                                         <a class="mobile-menubar theme-color" href="javascript:void(0);"><i class="far fa-bars"></i></a>
                                     </div>
-                                    <!-- <div class="mobile-menu"></div> -->
+                                   <!-- <div class="mobile-menu"></div> -->
                                 </div><!-- /header-right -->
                             </div><!-- /col -->
                         </div><!-- /row -->
@@ -290,3 +283,4 @@
         </div><!-- /side-mobile-menu -->
         <div class="body-overlay"></div>
         <!-- header extra info end  -->
+   
