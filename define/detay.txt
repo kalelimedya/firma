@@ -1,0 +1,1 @@
+Site içerisinde sabit değişkenler burada yer alacak, kalabalık engellenecek.
