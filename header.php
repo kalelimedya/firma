@@ -49,112 +49,65 @@
                         <div class="row align-items-center justify-content-between position-relative">
                             <div class="col-xl-2 col-lg-2 col-md-3 col-sm-5 col-6">
                                 <div class="logo">
-                                    <a href="index.html" class="d-inline-block"><img src="images/logo/logo.png" alt="Evalo"></a>
+                                    <a href="index.php" class="d-inline-block"><img src="images/logo/logo.png" alt="Evalo"></a>
                                 </div>
                             </div><!-- /col -->
                             <div class="col-xl-7 col-lg-7 col-md-1 col-sm-1 col-1 d-none d-lg-flex justify-content-end position-static pr-0">
                                 <div class="main-menu">
                                     <nav id="mobile-menu">
                                         <ul class="d-block">
-                                            <li class="full-mega-menu-position"><a class="active" href="index.html">Home</a>
-                                                <ul class="mega-menu full-mega-menu full-mega-menu1 pt-35 pb-10 pl-30 pr-0 theme-bg">
-                                                    <li class="pl-05 pr-05  pb-20">
-                                                        <a href="index.html">
-                                                            <img class="w100" src="images/menu/mega-menu-img1.jpg" alt="image">
-                                                            <span class="d-block black text-md-center f-700 mt-10">Saas 1</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="pl-05 pr-05 pb-20">
-                                                        <a href="index2-sass.html">
-                                                            <img class="w100" src="images/menu/mega-menu-img2.jpg" alt="image">
-                                                            <span class="d-block black text-md-center f-700 mt-10">Saas 2</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="pl-05 pr-05 pb-20">
-                                                        <a href="index3-digital-agency.html">
-                                                            <img class="w100" src="images/menu/mega-menu-img3.jpg" alt="image">
-                                                            <span class="d-block black text-md-center f-700 mt-10">Digital Agency</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="pl-05 pr-05 pb-20">
-                                                        <a href="index4-startup.html">
-                                                            <img class="w100" src="images/menu/mega-menu-img4.jpg" alt="image">
-                                                            <span class="d-block black text-md-center f-700 mt-10">Startup</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="pl-05 pr-05 pb-20">
-                                                        <a href="index5-app-landing-page.html">
-                                                            <img class="w100" src="images/menu/mega-menu-img5.jpg" alt="image">
-                                                            <span class="d-block black text-md-center f-700 mt-10">App Landing Page</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="pl-05 pr-05 pb-20">
-                                                        <a href="index6-agency.html">
-                                                            <img class="w100" src="images/menu/mega-menu-img6.jpg" alt="image">
-                                                            <span class="d-block black text-md-center f-700 mt-10">Agency 2</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="pl-05 pr-05 pb-20">
-                                                        <a href="index7-portfolio-minimal.html">
-                                                            <img class="w100" src="images/menu/mega-menu-img5.jpg" alt="image">
-                                                            <span class="d-block black text-md-center f-700 mt-10">Minimal portfolio</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="pl-05 pr-05 pb-20">
-                                                        <a href="index8-portfolio.html">
-                                                            <img class="w100" src="images/menu/mega-menu-img1.jpg" alt="image">
-                                                            <span class="d-block black text-md-center f-700 mt-10">Portfolio</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="about-us.html">About</a></li>
-                                            <li><a href="service.html">Service</a>
+                                            <li class="full-mega-menu-position"><a class="active" href="index.php">Anasayfa</a></li>
+                                            <li><a href="about-us.php">Hakkımızda</a></li>
+                                            <li><a href="service.php">Hizmetlerimiz</a>
+                                                <!--
                                                 <ul class="mega-menu mega-dropdown-menu white-bg ml-0">
-                                                    <li><a href="service.html">Service</a></li>
-                                                    <li><a href="login.html">Login</a></li>
+                                                    <li><a href="service.php">Service</a></li>
+                                                    <li><a href="login.php">Login</a></li>
                                                 </ul>
+                                            -->
                                             </li>
+                                              <!-- 
                                             <li class="full-mega-menu-position"><a href="#">pages</a>
+                                             
                                                 <ul class="mega-menu full-mega-menu full-mega-menu2 d-lg-flex white-bg pl-35 pt-30 pr-25 pb-20">
                                                     <li>
                                                         <a class="mega-title mb-15" href="#">Home</a>
  
                                                         <ul>
-                                                            <li><a href="index.html">Saas</a></li>
-                                                            <li><a href="index2-sass.html">Saas 2</a></li>
-                                                            <li><a href="index3-digital-agency.html">Digital Agency 1</a></li>
-                                                            <li><a href="index4-startup.html">Startup</a></li>
-                                                            <li><a href="index5-app-landing-page.html">App Landing</a></li>
-                                                            <li><a href="index6-agency.html">Digital Agency 2</a></li>
-                                                            <li><a href="index7-portfolio-minimal.html">Minimal Portfolio</a></li>
-                                                            <li><a href="index8-portfolio.html">Portfolio</a></li>
+                                                            <li><a href="index.php">Saas</a></li>
+                                                            <li><a href="index2-sass.php">Saas 2</a></li>
+                                                            <li><a href="index3-digital-agency.php">Digital Agency 1</a></li>
+                                                            <li><a href="index4-startup.php">Startup</a></li>
+                                                            <li><a href="index5-app-landing-page.php">App Landing</a></li>
+                                                            <li><a href="index6-agency.php">Digital Agency 2</a></li>
+                                                            <li><a href="index7-portfolio-minimal.php">Minimal Portfolio</a></li>
+                                                            <li><a href="index8-portfolio.php">Portfolio</a></li>
                                                         </ul>
                                                     </li>
                                                     <li>
                                                         <a class="mega-title mb-15" href="#">Pages</a>
                                                         <ul>
-                                                            <li><a href="about-us.html">About us</a></li>
-                                                            <li><a href="service.html">Service</a></li>
-                                                            <li><a href="blog-details.html">Service</a></li>
-                                                            <li><a href="team.html">Team</a></li>
-                                                            <li><a href="contact-us.html">Contact us</a></li>
-                                                            <li><a href="faq.html">Faq page</a></li>
-                                                            <li><a href="404-error.html">404-error</a></li>
-                                                            <li><a href="login.html">Login</a></li>
+                                                            <li><a href="about-us.php">About us</a></li>
+                                                            <li><a href="service.php">Service</a></li>
+                                                            <li><a href="blog-details.php">Service</a></li>
+                                                            <li><a href="team.php">Team</a></li>
+                                                            <li><a href="contact-us.php">Contact us</a></li>
+                                                            <li><a href="faq.php">Faq page</a></li>
+                                                            <li><a href="404-error.php">404-error</a></li>
+                                                            <li><a href="login.php">Login</a></li>
                                                         </ul>
                                                     </li>
                                                     <li>
                                                         <a class="mega-title mb-15" href="#">Blog</a>
                                                         <ul>
-                                                            <li><a href="blog.html">Main Blog Page</a></li>
-                                                            <li><a href="blog2.html">Blog Page v2</a></li>
-                                                            <li><a href="blog3.html">Blog Page v3</a></li>
-                                                            <li><a href="blog-details.html">Blog details 1</a></li>
-                                                            <li><a href="blog-details2.html">Blog details 2</a></li>
-                                                            <li><a href="blog-details3.html">blog-details 3</a></li>
-                                                            <li><a href="blog-details-gallery.html">Blog details gallery</a></li>
-                                                            <li><a href="blog-details-quote.html">Blog details quote</a></li>
+                                                            <li><a href="blog.php">Main Blog Page</a></li>
+                                                            <li><a href="blog2.php">Blog Page v2</a></li>
+                                                            <li><a href="blog3.php">Blog Page v3</a></li>
+                                                            <li><a href="blog-details.php">Blog details 1</a></li>
+                                                            <li><a href="blog-details2.php">Blog details 2</a></li>
+                                                            <li><a href="blog-details3.php">blog-details 3</a></li>
+                                                            <li><a href="blog-details-gallery.php">Blog details gallery</a></li>
+                                                            <li><a href="blog-details-quote.php">Blog details quote</a></li>
                                                         </ul>
                                                     </li>
                                                     <li>
@@ -163,58 +116,61 @@
                                                             <li>
                                                                 <div class="recent-blog-menu d-flex justify-content-between pb-22">
                                                                     <div class="rbm-img pr-15">
-                                                                        <a href="blog-details.html" class="d-inline-block">
+                                                                        <a href="blog-details.php" class="d-inline-block">
                                                                             <img class="w-100 h-100" src="images/menu/blog-menu-img1.jpg" alt="image">
                                                                         </a>
                                                                     </div>
                                                                     <div class="rbm-text">
-                                                                        <a href="blog-details.html" class="d-block">
+                                                                        <a href="blog-details.php" class="d-block">
                                                                             <h6 class="mt--5">Lorem ipsum doloram etceio nse</h6>
                                                                         </a>
                                                                         <span class="d-block secondary-color2">Sept 28, 2020</span>
                                                                     </div>
-                                                                </div><!-- /recent-blog-menu -->
+                                                                </div>
                                                                 <div class="recent-blog-menu d-flex justify-content-between">
                                                                     <div class="rbm-img pr-15">
-                                                                        <a href="blog-details.html" class="d-inline-block">
+                                                                        <a href="blog-details.php" class="d-inline-block">
                                                                             <img class="w-100 h-100" src="images/menu/blog-menu-img1.jpg" alt="image">
                                                                         </a>
                                                                     </div>
                                                                     <div class="rbm-text">
-                                                                        <a href="blog-details.html" class="d-inline-block">
+                                                                        <a href="blog-details.php" class="d-inline-block">
                                                                             <h6 class="mt--4">Lorem ipsum doloram etceio nse</h6>
                                                                         </a>
                                                                         <span class="d-block secondary-color2">Sept 28, 2020</span>
                                                                     </div>
-                                                                </div><!-- /recent-blog-menu -->
+                                                                </div>
                                                             </li>
                                                         </ul>
                                                     </li>
-                                                </ul><!-- /mega-menu 2 -->
+                                                </ul>
+                                                -->
+                                                <!-- /mega-menu 2 -->
                                             </li>
-                                            <li><a href="blog.html">blog</a>
+                                            <li><a href="blog.php">Blog</a>
+                                                <!--
                                                 <ul class="mega-menu mega-dropdown-menu white-bg ml-0">
-                                                    <li><a href="blog.html">Blog v1</a></li>
-                                                    <li><a href="blog2.html">Blog v2</a></li>
-                                                    <li><a href="blog3.html">Blog v3</a></li>
-                                                    <li><a href="blog4.html">Blog v4</a></li>
-                                                    <li><a href="blog5.html">Blog v5</a></li>
-                                                    <li><a href="blog6.html">Blog v6</a></li>
+                                                    <li><a href="blog.php">Blog v1</a></li>
+                                                    <li><a href="blog2.php">Blog v2</a></li>
+                                                    <li><a href="blog3.php">Blog v3</a></li>
+                                                    <li><a href="blog4.php">Blog v4</a></li>
+                                                    <li><a href="blog5.php">Blog v5</a></li>
+                                                    <li><a href="blog6.php">Blog v6</a></li>
                                                     <li class="position-relative">
                                                         <a href="#">Blog details <span class="pr-20 float-right"><i class="fas fa-angle-right"></i></span></a>
                                                         <div class="mega-menu mega-sub-menu bg-white">
                                                             <ul>
-                                                                <li><a href="blog-details.html">Blog details 1</a></li>
-                                                                <li><a href="blog-details2.html">Blog details 2</a></li>
-                                                                <li><a href="blog-details3.html">blog-details 3</a></li>
-                                                                <li><a href="blog-details-gallery.html">Blog details gallery</a></li>
-                                                                <li><a href="blog-details-quote.html">Blog details quote</a></li>
+                                                                <li><a href="blog-details.php">Blog details 1</a></li>
+                                                                <li><a href="blog-details2.php">Blog details 2</a></li>
+                                                                <li><a href="blog-details3.php">blog-details 3</a></li>
+                                                                <li><a href="blog-details-gallery.php">Blog details gallery</a></li>
+                                                                <li><a href="blog-details-quote.php">Blog details quote</a></li>
                                                             </ul>
-                                                        </div><!-- /mega-sub-menu -->
-                                                    </li>
+                                                        </div>                                                    </li>
                                                 </ul>
+                                                    -->
                                             </li>
-                                            <li><a href="contact-us.html">Contact</a>
+                                            <li><a href="contact.php">İletişim</a>
                                             </li>
                                          </ul>
                                     </nav>
@@ -223,7 +179,7 @@
                             <div class="col-xl-3  col-lg-3 col-md-6 col-sm-6 col-4">
                                 <div class="header-right d-flex align-items-center justify-content-end">
                                     <div class="my-btn d-none d-md-block">
-                                        <a href="contact-us.html" class="btn transparent-bg text-capitalize">Get A Quote</a>
+                                        <a href="contact-us.php" class="btn transparent-bg text-capitalize">Get A Quote</a>
                                     </div><!-- /my-btn -->
                                     <div class="d-block d-lg-none pl-20">
                                         <a class="mobile-menubar theme-color" href="javascript:void(0);"><i class="far fa-bars"></i></a>
