@@ -1,3 +1,9 @@
+  <?php 
+      include '../yon/vt.php';
+      include '../yon/function.php';
+      oturumkontrol();
+   ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,10 +12,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
   <meta name="description" content=""/>
   <meta name="author" content=""/>
-  <title>Dashtreme - Multipurpose Bootstrap4 Admin Template</title>
+  <title>WORTH ADMİN - WELCOME BACK</title>
   <!-- loader-->
   <link href="assets/css/pace.min.css" rel="stylesheet"/>
   <script src="assets/js/pace.min.js"></script>
+  <!--favicon-->
   <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
   <!-- Bootstrap core CSS-->
   <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
@@ -24,34 +31,60 @@
 
 <body class="bg-theme bg-theme1">
 
+<!-- start loader -->
+   <div id="pageloader-overlay" class="visible incoming"><div class="loader-wrapper-outer"><div class="loader-wrapper-inner" ><div class="loader"></div></div></div></div>
+   <!-- end loader -->
+
 <!-- Start wrapper-->
  <div id="wrapper">
 
- <div class="height-100v d-flex align-items-center justify-content-center">
-	<div class="card card-authentication1 mb-0">
+ <div class="loader-wrapper"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>
+	<div class="card card-authentication1 mx-auto my-5">
 		<div class="card-body">
 		 <div class="card-content p-2">
-		  <div class="card-title text-uppercase pb-2">Reset Password</div>
-		    <p class="pb-2">Please enter your email address. You will receive a link to create a new password via email.</p>
-		    <form>
+		 	<div class="text-center">
+		 		<img src="assets/images/logo-icon.png" alt="logo icon">
+		 	</div>
+		  <div class="card-title text-uppercase text-center py-3">WORTHYAZILIM ADMİN PANEL</div>
+	       <?php  if(@$_GET["durum"]=="no") { ?>
+                  <div class="alert alert-danger">
+                    Mail veya şifre hatalı!
+                  </div>
+         <?php } ?>
+       
+		    <form action="../yon/ajax.php" method="POST">
 			  <div class="form-group">
-			  <label for="exampleInputEmailAddress" class="">Email Address</label>
+			  <label for="exampleInputUsername" class="sr-only">E-Posta</label>
 			   <div class="position-relative has-icon-right">
-				  <input type="text" id="exampleInputEmailAddress" class="form-control input-shadow" placeholder="Email Address">
+				  <input type="email" id="exampleInputUsername" name="kul_mail" class="form-control input-shadow" placeholder="Kullanıcı Adınızı Giriniz" required="">
 				  <div class="form-control-position">
-					  <i class="icon-envelope-open"></i>
+					  <i class="icon-user"></i>
 				  </div>
 			   </div>
 			  </div>
+			  <div class="form-group">
+			  <label for="exampleInputPassword" class="sr-only">Şifre</label>
+			   <div class="position-relative has-icon-right">
+				  <input type="password" id="exampleInputPassword" name="kul_sifre" class="form-control input-shadow" placeholder="Şifrenizi Giriniz" required="">
+				  <div class="form-control-position">
+					  <i class="icon-lock"></i>
+				  </div>
+			   </div>
+			  </div>
+			<div class="form-row">
+			 <div class="form-group col-6">
+			  
+			 </div>
+		
+			</div>
+			 <button type="submit" name="oturumacma" class="btn btn-light btn-block">Giriş yap</button>
 			 
-			  <button type="button" class="btn btn-light btn-block mt-3">Reset Password</button>
 			 </form>
 		   </div>
 		  </div>
-		   <div class="card-footer text-center py-3">
-		    <p class="text-warning mb-0">Return to the <a href="login.html"> Sign In</a></p>
+		  <div class="card-footer text-center py-3">
+		    <p class="text-warning mb-0">WORTH YAZILIM</p>
 		  </div>
-	     </div>
 	     </div>
     
      <!--Start Back To Top Button-->
@@ -109,6 +142,5 @@
   <!-- Custom scripts -->
   <script src="assets/js/app-script.js"></script>
   
-	
 </body>
 </html>
