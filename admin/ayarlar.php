@@ -11,6 +11,17 @@
 		<h3>Ayarlar</h3>
 		<div class="row">
 			<div class="col-md-12">
+          <?php if(@$_GET["durum"]=="ok") {?>
+                <div class="alert alert-success alert-dismissible" role="alert">
+                     <button type="button" class="close" data-dismiss="alert">×</button>
+                      <div class="alert-icon">
+                     <i class="icon-check"></i>
+                      </div>
+                      <div class="alert-message">
+                        <span><strong>Başarılı!</strong> Veri güncellemesi başarılı.</span>
+                      </div>
+                  </div>
+          <?php   } ?>
 					<div class="card">
            <div class="card-body">
            <div class="card-title">Ayarlar</div>

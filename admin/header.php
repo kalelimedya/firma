@@ -64,42 +64,42 @@ include '../yon/function.php';
       </li>
        <li>
         <a href="bizeulas.php">
-          <i class=""></i> <span>Bize Ulaş</span>
+          <i class="zmdi zmdi-assignment-o"></i><span>Bize Ulaş</span>
         </a>
       </li>
       <li>
         <a href="blog.php">
-          <i class=""></i> <span>Blog</span>
+          <i class="zmdi zmdi-assignment-o"></i> <span>Blog</span>
         </a>
       </li>
 
       <li>
         <a href="hakkimizda.php">
-          <i class=""></i> <span>Hakkımızda</span>
+         <i class="zmdi zmdi-assignment-o"></i> <span>Hakkımızda</span>
         </a>
       </li>
 
       <li>
         <a href="iletisim.php">
-          <i class=""></i> <span>İletişim</span>
+          <i class="zmdi zmdi-assignment-o"></i> <span>İletişim</span>
         </a>
       </li>
 
       <li>
         <a href="kategoriler.php">
-          <i class=""></i> <span>Kullanıcılar</span>
+          <i class="zmdi zmdi-assignment-o"></i><span>Kullanıcılar</span>
         </a>
       </li>
 
       <li>
         <a href="menu.php" target="_blank">
-          <i class=""></i> <span>Menü</span>
+         <i class="zmdi zmdi-assignment-o"></i> <span>Menü</span>
         </a>
       </li>
 
        <li>
         <a href="yorumlar.php" target="_blank">
-          <i class=""></i> <span>Yorumlar</span>
+          <i class="zmdi zmdi-assignment-o"></i> <span>Yorumlar</span>
         </a>
       </li>
       <!--
