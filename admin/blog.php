@@ -26,6 +26,17 @@
                   </div>
           <?php   } ?>
 		<div class="card">
+            <?php if(@$_GET["durum"]=="no") {?>
+                <div class="alert alert-danger alert-dismissible" role="alert">
+                     <button type="button" class="close" data-dismiss="alert">×</button>
+                      <div class="alert-icon">
+                     <i class="icon-trash"></i>
+                      </div>
+                      <div class="alert-message">
+                        <span><strong>Başarılı!</strong> Veri Silinimi başarılı.</span>
+                      </div>
+                  </div>
+          <?php   } ?>
             <div class="card-body">
               <h5 class="card-title">Blog</h5>
 			  <div class="table-responsive">
@@ -50,7 +61,7 @@
                     <td><?php echo $sorgucek["h_baslik"]; ?></td>
                     <td><?php echo $sorgucek["h_tarih"]; ?></td>
                     <td>
-                      <img src="../images/blog/<?php echo $sorgucek['h_resim']; ?>">
+                      <img src="../images/blog/<?php echo $sorgucek['h_resim']; ?>" style="max-width: 200px;" class="img-fluid">
                     </td>
                     <td><?php echo substr($sorgucek["h_metin"],0,20); ?></td>
                     <td>
@@ -65,12 +76,15 @@
                     		<div class="col-md-6">
                     			<form action="../yon/ajax.php" method="POST">
 		                    		<input type="hidden" name="h_id" value="<?php echo $sorgucek['h_id']; ?>">
+                            <input type="hidden" name="h_resim" value="<?php echo $sorgucek['h_resim']; ?>">
 		                    		<button class="btn btn-light btn-block" name="habersil"><span style="font-weight:bold;">X</span></button>
 		                    	</form>
                     		</div>
                     		<div class="col-md-6">
                     			<form action="haberduzenle.php" method="POST">
 		                    		<input type="hidden" name="h_id" value="<?php echo $sorgucek['h_id']; ?>">
+                            <input type="hidden" name="h_resim" value="<?php echo $sorgucek['h_resim']; ?>">
+                            <input type="hidden" name="k_id" value="<?php echo $sorgucek['k_id']; ?>">
 		                    		<button class="btn btn-light btn-block"><b><i class="zmdi zmdi-assignment"></i></b></button>
 		                    	</form>
                     		</div>

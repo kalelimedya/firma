@@ -374,24 +374,11 @@ if (isset($_POST['habersil'])) {
 	$sonuc=$sorgu->execute(array(
 		'h_id' =>$_POST['h_id']
 	));
-
+	unlink($_POST["h_resim"]);
 	if ($sonuc) {
-		header("location:../admin/haberler.php?durum=ok");
+		header("location:../admin/blog.php?durum=ok");
 	} else {
-		header("location:../admin/haberler.php?durum=no");
-	}
-}
-/********************************/
-if (isset($_POST['habersil'])) {
-	$sorgu=$db->prepare("DELETE FROM haberler WHERE h_id=:h_id");
-	$sonuc=$sorgu->execute(array(
-		'h_id' =>$_POST['h_id']
-	));
-
-	if ($sonuc) {
-		header("location:../admin/haberler.php?durum=ok");
-	} else {
-		header("location:../admin/haberler.php?durum=no");
+		header("location:../admin/blog.php?durum=no");
 	}
 }
 /********************************/
