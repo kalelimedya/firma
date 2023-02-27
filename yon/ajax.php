@@ -178,7 +178,7 @@ if (isset($_POST['ayarkaydet'])) {
 	if ($_FILES['site_logo']['error']=="0") {
 			$gecici_isim=$_FILES['site_logo']['tmp_name'];
 			$dosya_ismi=rand(100000,999999).$_FILES['site_logo']['name'];
-			move_uploaded_file($gecici_isim, "../images/$dosya_ismi");
+			move_uploaded_file($gecici_isim, "../images/logo/$dosya_ismi");
 			$sorgu=$db->prepare("
 			UPDATE ayarlar SET
 			site_logo=:site_logo 
