@@ -57,7 +57,7 @@
                                     <nav id="mobile-menu">
                                         <ul class="d-block">
                                             <li class="full-mega-menu-position"><a class="active" href="index.php">Anasayfa</a></li>
-                                            <li><a href="about-us.php">Hakkımızda</a></li>
+                                            <li><a href="about.php">Hakkımızda</a></li>
                                             <li><a href="service.php">Hizmetlerimiz</a>
                                                 <!--
                                                 <ul class="mega-menu mega-dropdown-menu white-bg ml-0">

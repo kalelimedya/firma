@@ -1,5 +1,5 @@
 <?php include 'header.php'; 
-			$sorgu2=$db->prepare("SELECT * FROM haberler");
+			$sorgu2=$db->prepare("SELECT * FROM yorumlar");
 			$sorgu2->execute();
 			$say=1;
 
@@ -50,18 +50,17 @@
           <?php   } ?>
             <div class="card-body">
               <h5 class="card-title">Blog</h5>
-              <a href="haberekle.php" class="btn btn-light" style="margin-bottom: 10px;">Gönderi Ekle</a>
 			  <div class="table-responsive">
               <table class="table table-hover">
                 <thead>
                 	
                   <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Gönderi Başlık</th>
-                    <th scope="col">Gönderi Tarihi</th>
-                    <th scope="col">Gönderi Resmi</th>
-                    <th scope="col">Gönderi Metni</th>
-                    <th scope="col">Gönderi Öne Çıkar</th>
+                    <th scope="col">Yorum Gönderi Başlığı</th>
+                    <th scope="col">Kullanıcı ID</th>
+                    <th scope="col">Yorum Aktifliği</th>
+                    <th scope="col">Yorum Mail</th>
+                    <th scope="col">Yorum Mesaj</th>
                     <th scope="col"></th>
                   </tr>
                
@@ -70,35 +69,40 @@
                 	<?php while($sorgucek=$sorgu2->fetch(PDO::FETCH_ASSOC)) { ?>
                   <tr>
                     <th scope="row"><?php echo $say++; ?></th>
-                    <td><?php echo $sorgucek["h_baslik"]; ?></td>
-                    <td><?php echo $sorgucek["h_tarih"]; ?></td>
+                    <td><?php echo $sorgucek["h_seo"]; ?></td>
+                    <td><?php echo $sorgucek["kul_id"]; ?></td>
                     <td>
-                      <img src="../images/blog/<?php echo $sorgucek['h_resim']; ?>" style="max-width: 200px;" class="img-fluid">
-                    </td>
-                    <td><?php echo substr($sorgucek["h_metin"],0,20); ?></td>
-                    <td>
-                      <?php if(@$sorgucek["k_onecikar"]=="1") { ?>
-                            <i class="fa fa-check"></i>
+                      <?php if(@$sorgucek["y_aktif"]==1) { ?>
+                          Aktif
                       <?php } else { ?>
-                            <i class="fa fa-times"></i>
+                          Aktif Değil
                       <?php } ?>
+
+                    </td>
+                    <td><?php echo $sorgucek["y_email"] ?></td>
+                    <td>
+                        <?php echo $sorgucek["y_message"] ?>
                     </td>
                     <td>
                     	<div class="row">
                     		<div class="col-md-6">
                     			<form action="../yon/ajax.php" method="POST">
-		                    		<input type="hidden" name="h_id" value="<?php echo $sorgucek['h_id']; ?>">
-                            <input type="hidden" name="h_resim" value="<?php echo $sorgucek['h_resim']; ?>">
-		                    		<button class="btn btn-light btn-block" name="habersil"><span style="font-weight:bold;">X</span></button>
+		                    		<input type="hidden" name="yy_id" value="<?php echo $sorgucek['yy_id']; ?>">
+		                    		<button class="btn btn-light btn-block" name="yorumsil"><span style="font-weight:bold;">X</span></button>
 		                    	</form>
                     		</div>
                     		<div class="col-md-6">
-                    			<form action="haberduzenle.php" method="POST">
-		                    		<input type="hidden" name="h_id" value="<?php echo $sorgucek['h_id']; ?>">
-                            <input type="hidden" name="h_resim" value="<?php echo $sorgucek['h_resim']; ?>">
-                            <input type="hidden" name="k_id" value="<?php echo $sorgucek['k_id']; ?>">
-		                    		<button class="btn btn-light btn-block"><b><i class="zmdi zmdi-assignment"></i></b></button>
-		                    	</form>
+                    			<?php if(@$sorgucek["y_aktif"]==0) { ?>
+                                  <form action="../yon/ajax.php" method="POST">
+                                    <input type="hidden" name="yy_id" value="<?php echo $sorgucek['yy_id']; ?>">
+                                    <button class="btn btn-light btn-block" name="yorumonay" value="1"><b><i class="zmdi zmdi-assignment"></i> Onay</b></button>
+                                  </form>
+                          <?php } else { ?>
+                            <form action="../yon/ajax.php" method="POST">
+                              <input type="hidden" name="yy_id" value="<?php echo $sorgucek['yy_id']; ?>">
+                                    <button class="btn btn-light btn-block" name="yorumaski" value="1"><b><i class="zmdi zmdi-assignment"></i> Askıya Al</b></button>
+                                  </form>
+                          <?php } ?>
                     		</div>
                     	</div>
                     </td>

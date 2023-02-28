@@ -200,16 +200,58 @@ if (isset($_POST['ayarkaydet'])) {
 }
 /********************************/
 if (isset($_POST['hakkimizdakaydet'])) {
+	if ($_FILES['hak_resim1']['error']=="0") {
+			$gecici_isim=$_FILES['hak_resim1']['tmp_name'];
+			$dosya_ismi=rand(100000,999999).$_FILES['hak_resim1']['name'];
+			move_uploaded_file($gecici_isim, "../images/about/$dosya_ismi");
+			$sorgu=$db->prepare("
+			UPDATE hakkimizda SET
+			hak_resim1=:hak_resim1 
+			WHERE id=1
+				");
+
+			$sonuc=$sorgu->execute(array(
+			'hak_resim1'=>$dosya_ismi
+			));
+		}
+		if ($_FILES['hak_resim2']['error']=="0") {
+			$gecici_isim=$_FILES['hak_resim2']['tmp_name'];
+			$dosya_ismi=rand(100000,999999).$_FILES['hak_resim2']['name'];
+			move_uploaded_file($gecici_isim, "../images/about/$dosya_ismi");
+			$sorgu=$db->prepare("
+			UPDATE hakkimizda SET
+			hak_resim2=:hak_resim2 
+			WHERE id=1
+				");
+
+			$sonuc=$sorgu->execute(array(
+			'hak_resim1'=>$dosya_ismi
+			));
+		}
 	$sorgu=$db->prepare("
 		UPDATE hakkimizda SET
-		hakkimizda_icerik_tr=:hakkimizda_icerik_tr,
-		hakkimizda_icerik_en=:hakkimizda_icerik_en
+		hakkimizda_icerik=:hakkimizda_icerik,
+		hak_baslik=:hak_baslik,
+		hak_baslik_ust=:hak_baslik_ust,
+		hak_say_1=:hak_say_1,
+		hak_say_2=:hak_say_2,
+		hak_say_3=:hak_say_3,
+		hak_say_4=:hak_say_4,
+		hak_say_bas=:hak_say_bas,
+		hak_say_yazi=:hak_say_yazi
 		WHERE hak_id=1
 		");
 
 	$sonuc=$sorgu->execute(array(
-		'hakkimizda_icerik_tr'=>$_POST['hakkimizda_icerik_tr'],
-		'hakkimizda_icerik_en'=>$_POST['hakkimizda_icerik_en']
+		'hakkimizda_icerik'=>$_POST['hakkimizda_icerik'],
+		'hak_baslik'=>$_POST['hak_baslik'],
+		'hak_baslik_ust'=>$_POST['hak_baslik_ust'],
+		'hak_say_1'=>$_POST['hak_say_1'],
+		'hak_say_2'=>$_POST['hak_say_2'],
+		'hak_say_3'=>$_POST['hak_say_3'],
+		'hak_say_4'=>$_POST['hak_say_4'],
+		'hak_say_bas'=>$_POST['hak_say_bas'],
+		'hak_say_yazi'=>$_POST['hak_say_yazi']
 	));
 	if ($sonuc) {
 		header("location:../admin/hakkimizda.php?durum=ok");
@@ -225,7 +267,6 @@ if (isset($_POST['iletisimkaydet'])) {
 	$sorgu=$db->prepare("
 		UPDATE iletisim SET
 		i_bas=:i_bas,
-		i_alt_bas=:i_alt_bas,
 		i_ack=:i_ack,
 		i_adr=:i_adr,
 		i_mail=:i_mail,
@@ -235,7 +276,6 @@ if (isset($_POST['iletisimkaydet'])) {
 
 	$sonuc=$sorgu->execute(array(
 		'i_bas'=>$_POST['i_bas'],
-		'i_alt_bas'=>$_POST['i_alt_bas'],
 		'i_ack'=>$_POST['i_ack'],
 		'i_adr'=>$_POST['i_adr'],
 		'i_mail'=>$_POST['i_mail'],
@@ -363,6 +403,32 @@ if (isset($_POST['yorumsil'])) {
 	));
 
 	if ($sonuc) {
+		header("location:../admin/yorumlar.php?durum=sil");
+	} else {
+		header("location:../admin/yorumlar.php?durum=no");
+	}
+}
+/********************************/
+if (isset($_POST['yorumonay'])) {
+	$sorgu=$db->prepare("UPDATE yorumlar SET y_aktif=1 WHERE yy_id=:yy_id");
+	$sonuc=$sorgu->execute(array(
+		'yy_id' =>$_POST['yy_id']
+	));
+
+	if ($sonuc) {
+		header("location:../admin/yorumlar.php?durum=ok");
+	} else {
+		header("location:../admin/yorumlar.php?durum=no");
+	}
+}
+/********************************/
+if (isset($_POST['yorumaski'])) {
+	$sorgu=$db->prepare("UPDATE yorumlar SET y_aktif=0 WHERE yy_id=:yy_id");
+	$sonuc=$sorgu->execute(array(
+		'yy_id' =>$_POST['yy_id']
+	));
+
+	if ($sonuc) {
 		header("location:../admin/yorumlar.php?durum=ok");
 	} else {
 		header("location:../admin/yorumlar.php?durum=no");
@@ -376,7 +442,7 @@ if (isset($_POST['habersil'])) {
 	));
 	unlink($_POST["h_resim"]);
 	if ($sonuc) {
-		header("location:../admin/blog.php?durum=ok");
+		header("location:../admin/blog.php?durum=sil");
 	} else {
 		header("location:../admin/blog.php?durum=no");
 	}
@@ -416,7 +482,7 @@ if (isset($_POST['haberekle'])) {
 			if ($_FILES['h_resim']["size"]< 1024*1024) {
 				$gecici_isim=$_FILES['h_resim']['tmp_name'];
 				$dosya_ismi=rand(100000,999999).$_FILES['h_resim']['name'];
-				move_uploaded_file($gecici_isim, "../news/$dosya_ismi");
+				move_uploaded_file($gecici_isim, "../images/blog/$dosya_ismi");
 
 				$sql=$db->prepare("SELECT * FROM kategoriler WHERE k_id={$_POST['k_id']}");
 				$sql->execute();
@@ -427,7 +493,6 @@ if (isset($_POST['haberekle'])) {
 					h_baslik=:h_baslik,
 					h_resim=:h_resim,
 					h_metin=:h_metin,
-					h_metin_ing=:h_metin_ing,
 					h_yazar=:h_yazar,
 					k_id=:k_id,
 					k_isim=:k_isim,
@@ -440,41 +505,41 @@ if (isset($_POST['haberekle'])) {
 					'h_baslik'=>$_POST['h_baslik'],
 					'h_resim'=>$dosya_ismi,
 					'h_metin'=>$_POST['h_metin'],
-					'h_metin_ing'=>$_POST['h_metin_ing'],
 					'h_yazar'=>$_POST['h_yazar'],
 					'k_id'=>$_POST['k_id'],
 					'k_isim'=>$sqlcek['k_isim'],
-					'h_seo'=>seo($_POST['h_baslik']),
+					'h_seo'=>seflink($_POST['h_baslik']),
 					'k_onecikar'=>$_POST['k_onecikar']
 
 				));
 
 				if ($sonuc) {
-					header("location:../admin/haberler.php?durum=ok");
+					header("location:../admin/blog.php?durum=ok");
 				}
 				else
 				{
-					header("location:../admin/haberler.php?durum=no");
+					header("location:../admin/blog.php?durum=no");
 				}
 				exit;
 			}
 			else {
-				header("Location:../admin/haberekle.php?durum=boyutbuyuk");
+				header("Location:../admin/blog.php?durum=boyutbuyuk");
 			}
 		}
 		else {
-			header("Location:../admin/haberekle.php?durum=uzantiyanlis");
+			header("Location:../admin/blog.php?durum=uzantiyanlis");
 		}
 	}
 }
 /********************************/
-if (isset($_POST['haberiguncelle'])) {
+if (isset($_POST['haberguncelle'])) {
+	$hid=$_POST["h_id"];
 	if ($_FILES['h_resim']['error']=="0") {
 		if ($_FILES['h_resim']["type"]=="png" || "jpg") {
 			if ($_FILES['h_resim']["size"]< 1024*1024) {
 				$gecici_isim=$_FILES['h_resim']['tmp_name'];
 				$dosya_ismi=rand(100000,999999).$_FILES['h_resim']['name'];
-				move_uploaded_file($gecici_isim, "../news/$dosya_ismi");
+				move_uploaded_file($gecici_isim, "../images/blog/$dosya_ismi");
 				$sorgu=$db->prepare("
 					UPDATE haberler SET
 					h_resim=:h_resim 
@@ -486,11 +551,11 @@ if (isset($_POST['haberiguncelle'])) {
 
 			}
 			else {
-				header("Location:../admin/haberekle.php?durum=boyutbuyuk");
+				header("Location:../admin/blog.php?durum=boyutbuyuk");
 			}
 		}
 		else {
-			header("Location:../admin/haberekle.php?durum=uzantiyanlis");
+			header("Location:../admin/blog.php?durum=uzantiyanlis");
 		}
 
 	}
@@ -502,7 +567,6 @@ if (isset($_POST['haberiguncelle'])) {
 		UPDATE haberler SET
 		h_baslik=:h_baslik,
 		h_metin=:h_metin,
-		h_metin_ing=:h_metin_ing,
 		h_yazar=:h_yazar,
 		k_id=:k_id,
 		k_isim=:k_isim,
@@ -514,20 +578,19 @@ if (isset($_POST['haberiguncelle'])) {
 	$sonuc=$sorgu->execute(array(
 		'h_baslik'=>$_POST['h_baslik'],
 		'h_metin'=>$_POST['h_metin'],
-		'h_metin_ing'=>$_POST['h_metin_ing'],
 		'h_yazar'=>$_POST['h_yazar'],
 		'k_id'=>$_POST['k_id'],
 		'k_isim'=>$sqlcek['k_isim'],
-		'h_seo'=>seo($_POST['h_baslik']),
+		'h_seo'=>seflink($_POST['h_baslik']),
 		'k_onecikar'=>$_POST['k_onecikar']
 
 	));
 	if ($sonuc) {
-		header("Location:../admin/haberler.php?durum=ok");
+		header("Location:../admin/blog.php?durum=ok");
 	}
 	else
 	{
-		header("Location:../admin/haberler.php?durum=no");
+		header("Location:../admin/blog.php?durum=no");
 	}
 	exit;
 }

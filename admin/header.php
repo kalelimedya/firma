@@ -11,8 +11,9 @@ include '../yon/function.php';
   <meta charset="utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-  <meta name="description" content=""/>
-  <meta name="author" content=""/>
+  <meta name="description" content="<?php echo $ayarcek['site_tanim'] ?>"/>
+  <meta name="author" content="<?php echo $ayarcek['site_yazari'] ?>"/>
+  <meta name="keywords" content="<?php echo $ayarcek['site_keywords'] ?>"/>
   <title><?php echo $ayarcek["site_baslik"]; ?></title>
   <!-- loader-->
   <link href="assets/css/pace.min.css" rel="stylesheet"/>
@@ -86,12 +87,6 @@ include '../yon/function.php';
       </li>
 
       <li>
-        <a href="kategoriler.php">
-          <i class="zmdi zmdi-assignment-o"></i><span>Kullanıcılar</span>
-        </a>
-      </li>
-
-      <li>
         <a href="menu.php" target="_blank">
          <i class="zmdi zmdi-assignment-o"></i> <span>Menü</span>
         </a>
@@ -133,6 +128,7 @@ include '../yon/function.php';
   </ul>
      
   <ul class="navbar-nav align-items-center right-nav-link">
+    <!--
     <li class="nav-item dropdown-lg">
       <a class="nav-link dropdown-toggle dropdown-toggle-nocaret waves-effect" data-toggle="dropdown" href="javascript:void();">
       <i class="fa fa-envelope-open-o"></i></a>
@@ -150,6 +146,7 @@ include '../yon/function.php';
           <li class="dropdown-item"> <i class="flag-icon flag-icon-de mr-2"></i> German</li>
         </ul>
     </li>
+    -->
     <li class="nav-item">
       <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" data-toggle="dropdown" href="#">
         <span class="user-profile"><img src="https://via.placeholder.com/110x110" class="img-circle" alt="user avatar"></span>
@@ -166,12 +163,6 @@ include '../yon/function.php';
            </div>
           </a>
         </li>
-        <li class="dropdown-divider"></li>
-        <li class="dropdown-item"><a href="posta.php"><i class="icon-envelope mr-2"></i> Posta Kutusu</a></li>
-        <li class="dropdown-divider"></li>
-        <li class="dropdown-item"><a href="bilgilerim.php"><i class="icon-wallet mr-2"></i> Hesap Bilgilerim</a></li>
-        <li class="dropdown-divider"></li>
-        <li class="dropdown-item"><a href=""><i class="icon-settings mr-2"></i> Ayarlar</a></li>
         <li class="dropdown-divider"></li>
         <li class="dropdown-item"><a href="../yon/cikis.php"><i class="icon-power mr-2"></i> Çıkış</a></li>
       </ul>

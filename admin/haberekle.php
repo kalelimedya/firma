@@ -1,10 +1,6 @@
-<?php include 'header.php';
-      $sorgu2=$db->prepare("SELECT * FROM haberler WHERE h_id={$_POST['h_id']}");
+<?php include 'header.php'; 
+      $sorgu2=$db->prepare("SELECT * FROM kategoriler");
       $sorgu2->execute();
-      $sorgucek=$sorgu2->fetch(PDO::FETCH_ASSOC);
-
-      $sorgu4=$db->prepare("SELECT * FROM kategoriler");
-      $sorgu4->execute();
 ?>
 <div class="clearfix"></div>
 	
@@ -39,55 +35,35 @@
             <input type="file" name="h_resim" class="form-control" id="input-1">
            </div>
            <div class="form-group">
-            <img src="../images/blog/<?php echo $sorgucek['h_resim'] ?>" class="img-fluid">
-           </div>
-           <div class="form-group">
             <label for="input-2">Haber Başlığı</label>
-            <input type="text" class="form-control" id="input-2" name="h_baslik" required="" value="<?php echo $sorgucek['h_baslik'] ?>">
+            <input type="text" class="form-control" id="input-2" name="h_baslik" required="">
            </div>
            <div class="form-group">
             <label for="input-3">Haber Tarihi</label>
-            <input type="date" class="form-control" id="input-3" name="h_tarih" value="<?php echo $sorgucek['h_tarih'] ?>">
+            <input type="date" class="form-control" id="input-3" name="h_tarih">
            </div>
            <div class="form-group">
             <label for="input-4">Haber Metni</label>
-            <textarea class="form-control" id="input-4" name="h_metin"><?php echo $sorgucek['h_metin'] ?></textarea>
-           </div>
-           <div class="form-group">
-            <label for="input-5">Haber Seo</label>
-            <input type="text" class="form-control" id="input-5" name="h_seo" value="<?php echo $sorgucek['h_seo'] ?>">
-           </div>
-           <div class="form-group">
-            <label for="input-6">Yorum Sayısı</label>
-            <input type="text" class="form-control" readonly="" id="input-6" readonly="" name="h_yorum" value="<?php echo $sorgucek['h_yorum'] ?>">
+            <textarea class="form-control" id="input-4" name="h_metin" required=""></textarea>
            </div>
            <div class="form-group">
             <label for="input-7">Kategori</label>
             <select name="k_id" class="form-control">
-             <?php while($sorgucek3=$sorgu4->fetch(PDO::FETCH_ASSOC)) { ?>
-                  
-                  <?php if($sorgucek["k_id"]==$sorgucek3["k_id"]) { ?>
-                        <option value="<?php echo $sorgucek3['k_id'] ?>" selected><?php echo $sorgucek3['k_isim'] ?></option>
-                  <?php } ?>
-                  <option value="<?php echo $sorgucek3['k_id'] ?>"><?php echo $sorgucek3['k_isim'] ?></option>
+             <?php while($sorgucek=$sorgu2->fetch(PDO::FETCH_ASSOC)) { ?>
+                  <option value="<?php echo $sorgucek['k_id'] ?>"><?php echo $sorgucek['k_isim'] ?></option>
            <?php } ?>
             </select>
            </div>
            <div class="form-group">
             <label for="input-8">Öne Çıkar</label>
             <select name="k_onecikar" class="form-control">
-              <?php if($sorgucek["k_onecikar"]==1) { ?>
                   <option selected="" value="1">Öne Çıkarılmıştır</option>
                   <option value="0">Öne Çıkarılmamıştır</option>
-              <?php } else {?>
-                  <option value="1">Öne Çıkarılmıştır</option>
-                  <option selected="" value="0">Öne Çıkarılmamıştır</option>
-              <?php } ?>
             </select>
            </div>
             <div class="form-group">
             <label for="input-9">Haber Yazarı</label>
-            <input type="text" class="form-control" id="input-9" name="h_yazar" value="<?php echo $sorgucek['h_yazar'] ?>">
+            <input type="text" class="form-control" id="input-9" name="h_yazar" required="">
            </div>
            <div class="form-group py-2">
             <!--
@@ -99,7 +75,7 @@
            </div>
            <div class="form-group">
             <input type="hidden" name="h_id" value="<?php echo $sorgucek['h_id'] ?>">
-            <button type="submit" name="haberguncelle" class="btn btn-light btn-block px-5"> Kaydet</button>
+            <button type="submit" name="haberekle" class="btn btn-light btn-block px-5"> Kaydet</button>
           </div>
         </form>
          </div>
