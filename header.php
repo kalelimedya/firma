@@ -1,3 +1,7 @@
+<?php include 'yon/vt.php';
+        include 'yon/function.php';
+ ?>
+
 <!doctype html>
 <html class="no-js" lang="zxx">
     <head>

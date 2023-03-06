@@ -1,4 +1,8 @@
-<?php include 'header.php'; ?>
+<?php include 'header.php'; 
+        $sorgu2=$db->prepare("SELECT * FROM iletisim");
+        $sorgu2->execute();
+        $sorgucek=$sorgu2->fetch(PDO::FETCH_ASSOC);
+?>
         <main>
             <!-- ======slider-area-start=========================================== -->
             <div class="slider-area position-relative primary-bg">
@@ -70,7 +74,7 @@
                                             <div class="contact-text">
                                                 <h4 class="f-700 mb-2">Email</h4>
                                                 <p class="mb-0">
-                                                    <a class="secondary-color2 primary-hover d-block" href="#">hello@hibro.com</a>
+                                                    <a class="secondary-color2 primary-hover d-block" href="#"><?php echo $sorgucek["i_mail"]; ?></a>
                                                     <a class="secondary-color2 primary-hover d-block" href="#">sales@evalo.com</a>
                                                 </p>
                                             </div>
