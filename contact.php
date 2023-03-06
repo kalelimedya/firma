@@ -61,8 +61,7 @@
                                             </div><!-- /contact-icon -->
                                             <div class="contact-text">
                                                 <h4 class="f-700 mb-2">Location</h4>
-                                                <p class="secondary-color mb-0">20 Bordeshi, Amin Bazar
-                                                    <br> Savar, Dhaka - 1348</p>
+                                                <p class="secondary-color mb-0"><?php echo $sorgucek["i_adr"] ?>
                                             </div>
                                         </li><!-- /contact-location -->
                                         <li class="contact-email s-contact text-md-center text-lg-left mb-35 transition-3 d-lg-flex d-flex d-md-block">
