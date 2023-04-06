@@ -1,70 +1,48 @@
 <?php include 'header.php'; ?>
 
         <main class="over-hidden">
-            <!-- ======slider-area-start=========================================== -->
-            <div class="slider-area home6 position-relative">
-                <div id="scene" class="position-absolute w-100 h-100">
-                    <img data-depth="0.20" class="shape shape-1 d-none d-lg-block" src="images/slider/shape/shape1.png" alt="#">
-                    <img data-depth="0.20" class="shape shape-2 d-none d-lg-block" src="images/slider/shape/shape2.png" alt="#">
-                    <img data-depth="0.20" class="shape shape-3 d-none d-lg-block r-shape" src="images/slider/shape/shape3.png" alt="#">
-                    <img data-depth="0.20" class="shape shape-4 d-none d-lg-block" src="images/slider/shape/shape4.png" alt="#">
-                    <img data-depth="0.20" class="shape shape-5 d-none d-lg-block r-shape" src="images/slider/shape/shape3.png" alt="#">
-                    <img data-depth="0.20" class="shape shape-6 d-none d-lg-block" src="images/slider/shape/shape5.png" alt="#">
-                    <img data-depth="0.20" class="shape shape-7 d-none d-lg-block" src="images/slider/shape/shape6.png" alt="#">
-                    <img data-depth="0.20" class="shape shape-8 d-none d-lg-block" src="images/slider/shape/shape7.png" alt="#">
-                    <img data-depth="0.20" class="shape shape-9 d-none d-lg-block" src="images/slider/shape/shape8.png" alt="#">
-                    <img data-depth="0.20" class="shape shape-10 d-none d-lg-block" src="images/slider/shape/shape9.png" alt="#">
-                    <img data-depth="0.20" class="shape shape-11 d-none d-lg-block" src="images/slider/shape/shape2.png" alt="#">
-                    <img data-depth="0.20" class="shape shape-12 d-none d-lg-block" src="images/slider/shape/shape10.png" alt="#">
-                    <img data-depth="0.20" class="shape shape-13 d-none d-lg-block r-shape" src="images/slider/shape/shape3.png" alt="#">
-                    <img data-depth="0.20" class="shape shape-14 d-none d-lg-block r-shape" src="images/slider/shape/shape3.png" alt="#">
-                    <img data-depth="0.20" class="shape shape-15 d-none d-lg-block" src="images/slider/shape/shape1.png" alt="#">
-                    <img data-depth="0.20" class="shape shape-16 d-none d-lg-block" src="images/slider/shape/shape11.png" alt="#">
-                    <img data-depth="0.20" class="shape shape-17 d-none d-lg-block r-shape" src="images/slider/shape/shape3.png" alt="#">
-                    <img data-depth="0.20" class="shape shape-18 d-none d-lg-block" src="images/slider/shape/shape12.png" alt="#">
-                    <img data-depth="0.20" class="shape shape-19 d-none d-lg-block r-shape" src="images/slider/shape/shape3.png" alt="#">
-                </div>
-                <!-- /shape-slider -->
-
-                <div class="single-slider slider-height6 position-relative white-overly d-flex align-items-center bg-cover bg-no-repeat z-index-1" data-background="images/slider/home6-slider-img.jpg">
-
-                    <div class="slider-social-link-area theme-bg d-none d-sm-inline-block position-absolute left-0 d-nonez-index1">
-                        <ul class="social-link">
-                            <li class="d-inline-block">
-                                <a class="white-color text-center pr-15 d-inline-block transition-3" href="#"><i class="fab fa-facebook-f"></i></a>
-                            </li>
-                            <li class="d-inline-block">
-                                <a class="white-color text-center pr-15 d-inline-block transition-3" href="#"><i class="fab fa-twitter"></i></a>
-                            </li>
-                            <li class="d-inline-block">
-                                <a class="white-color text-center pr-15 d-inline-block transition-3" href="#"><i class="fab fa-youtube"></i></a>
-                            </li>
-                            <li class="d-inline-block">
-                                <a class="white-color text-center d-inline-block transition-3" href="#"><i class="fab fa-instagram"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-
+        <div class="single-slider slider-height1 container-wrapper d-flex align-items-center z-index1" data-background="images/slider/home1-slider-bg.png">
                     <div class="container">
-                        <div class="row align-items-center justify-content-center">
-                            <div class="col-xl-12  col-lg-10  col-md-10  col-sm-12 col-12">
-                                <div class="slider-content text-center z-index1 pr-0">
-                                    <span class="f-700 theme-color d-block pb-10" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="40">We are Evalo</span>
-                                    <h1 class="f-700 pb-40" data-aos="fade-up" data-aos-duration="2500" data-aos-delay="100">World Class Creative Agency</h1>
-                                    <div class="my-btn" data-aos="fade-up" data-aos-duration="3000" data-aos-delay="150">
-                                        <a href="about-us.html" class="btn theme-bg text-capitalize f-18 f-700">learn more</a>
-                                    </div>
+                        <div class="row align-items-center">
+                            <div class="col-xl-6  col-lg-6  col-md-6  col-sm-12 col-12  d-flex align-items-center">
+                                <div class="slider-content mt--30 position-relative">
+                                    <span class="f-700 theme-color d-block pb-1" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="40">Worth Yazılım</span>
+                                    
+                                    <p data-aos="fade-right" data-aos-duration="2000">Teknolojik işlerinizi kolaylaştıracak kaliteli çözüm ortağınız</p>
+                                    <div class="video-player-btn d-flex align-items-center z-index11 mt-45" >
+                                        <a data-fancybox="" href="https://youtu.be/nqye02H_H6I" class="d-flex align-items-center">
+                                            <div class="video-play-wrap position-relative d-inline-block">
+                                                <div class="video-mark">
+                                                    <div class="wave-pulse wave-pulse-1"></div>
+                                                    <div class="wave-pulse wave-pulse-2"></div>
+                                                </div>
+                                                <div class="video-play position-relative text-center theme-bg d-inline-block white-color">
+                                                    <i class="fas fa-play"></i>
+                                                </div>
+                                            </div>
+                                            <span class="d-inline-block f-700 black-color pl-22">Play Video</span>
+                                        </a>
+                                    </div><!-- /video-player-btn -->
+                                </div>
+                            </div><!-- /col -->
+                            <div class="col-xl-6 col-lg-6  col-md-6  col-sm-12 col-12  d-flex align-items-center ">
+                                <div class="slider-img1 mt-25 pl-65 z-index1 position-relative">
+                                    <img class="bounce-animate" src="images/slider/home1-slider-img.png" alt="image">
+                                    <div class="slider-right-dotted s-dotted position-absolute d-none d-md-block z-index-1">
+                                        <img class="bounce-animate2" src="images/slider/shape/slider-right-dotted.png" alt="image">
+                                    </div><!-- /slider-right-dotted -->
                                 </div>
                             </div><!-- /col -->
                         </div><!-- /row -->
                     </div><!-- /container -->
-                    
-                    <div class="slider-email-area position-absolute right-0 d-none d-sm-block z-index1">
-                        <a class="theme-color f-700 d-inline-block" href="#">hello@evalo.com</a>
-                    </div>
+                    <div class="slider-left-dotted s-dotted position-absolute d-none d-md-block z-index1">
+                        <img class="rotate-animation" src="images/slider/shape/slider-left-dotted.png" alt="image">
+                    </div><!-- /slider-left-dotted -->
                 </div>
             </div>
             <!-- slider-area-end  -->
+
+          
 
 
             <!-- ====== about-area-start=========================================== -->

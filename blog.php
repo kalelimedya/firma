@@ -1,4 +1,7 @@
-<?php include 'header.php'; ?>
+<?php include 'header.php';
+    $sorgu=$db->prepare("SELECT * FROM haberler");
+    $sorgu->execute();
+ ?>
 
         <main>
             <!-- ======slider-area-start=========================================== -->
@@ -20,10 +23,10 @@
                             <div class="col-xl-12  col-lg-12  col-md-12  col-sm-12 col-12  d-flex align-items-center justify-content-center">
                                 <div class="page-title mt-110 text-center">
                                     <span class="theme-color f-700">Get Updated</span>
-                                    <h1 class="text-capitalize f-700 mt-10 mb-20">Our Blog</h1>
+                                    <h1 class="text-capitalize f-700 mt-10 mb-20">Blog</h1>
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb justify-content-center bg-transparent">
-                                        <li class="breadcrumb-item"><a class="secondary-color3" href="index.html">Home</a></li>
+                                        <li class="breadcrumb-item"><a class="secondary-color3" href="index.html">Anasayfa</a></li>
                                         <li class="breadcrumb-item active text-capitalize secondary-color3" aria-current="page">Blog</li>
                                         </ol>
                                     </nav>
@@ -42,33 +45,36 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-8  col-lg-8  col-md-12  col-sm-12 col-12">
+                     
                             <div class="blog-page1-content-wrapper">
-                                <img src="images/blog-page/blog-page1-img1.jpg" alt="image">
+                            <?php while($sorgucek=$sorgu->fetch(PDO::FETCH_ASSOC, ))  { ?>
+                                <img src="images/blog/<?php echo $sorgucek['h_resim'] ?>"/>
+                        
 
                                 <div class="blog-page1-content mt-25 mb-60">
                                     <ul class="blog-page-content-info mb-6 d-flex align-items-center">
                                         <li class="sub">
-                                            <span>Web Design</span>
+                                            <span><?php echo $sorgucek["k_isim"] ?></span>
                                         </li>
                                         <li><span class="pl-10 pr-10">|</span></li>
                                         <li class="date">
-                                            <span>Jan 26, 2019</span>
+                                            <span><?php echo $sorgucek["h_tarih"] ?></span>
                                         </li>
                                         <li><span class="pl-10 pr-10">|</span></li>
                                         <li class="admin">
-                                            <span> Juwel Khan</span>
+                                            <span><?php echo $sorgucek["h_yazar"] ?></span>
                                         </li>
                                     </ul><!-- /blog-page-content-tag -->
                                     <h4 class="mb-22">
-                                        <a href="blog-details.html">Kullam condim dolore ma gna</a>
+                                        <a href="blog-details.html"><?php echo $sorgucek["h_baslik"] ?></a>
                                     </h4>
-                                    <p>Eimod te mpor incididunt ut labore et dolore ma gna aliqua. Ut enim ad minim eniam quis nostrud exercitation tempor incididunt ut labore et do lore magna aliqua. Ut eim ad minim veniam, quis nostrud exercita ...</p>
+                                    <p><?php echo substr($sorgucek["h_metin"],0,50) ?></p>
                                     <div class="blog-page-footer mt-15 d-sm-flex align-items-center justify-content-between">
                                         <div class="my-btn mt-15">
-                                            <a href="blog-details.html" class="btn theme-bg text-capitalize f-18 f-700">read more</a>
+                                            <a href="blog-details.html" class="btn theme-bg text-capitalize f-18 f-700">devamını oku</a>
                                         </div>
                                         <div class="blog-page-social-link d-flex align-items-center justify-content-lg-end mt-25">
-                                            <span class="d-block text-uppercase pr-1 f-700 mb-0">Share :</span>
+                                            <span class="d-block text-uppercase pr-1 f-700 mb-0">Paylaş :</span>
                                             <ul class="social-link text-md-right">
                                                 <li class="d-inline-block">
                                                     <a class="facebook-color text-center pl-10 d-inline-block transition-3" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -86,102 +92,11 @@
                                         </div><!-- /blog-page-social-link -->
                                     </div>
                                 </div><!-- /blog-page1-content -->
-
+                                <?php } ?>
                             </div><!-- /blog-page1-content-wrapper -->
-
-                            <div class="blog-page1-content-wrapper">
-                                <img class="w-100" src="images/blog-page/blog-page1-img2.jpg" alt="image">
-
-                                <div class="blog-page1-content mt-25 mb-60">
-                                    <ul class="blog-page-content-info mb-6 d-flex align-items-center">
-                                        <li class="sub">
-                                            <span>Web Design</span>
-                                        </li>
-                                        <li><span class="pl-10 pr-10">|</span></li>
-                                        <li class="date">
-                                            <span>Jan 26, 2019</span>
-                                        </li>
-                                        <li><span class="pl-10 pr-10">|</span></li>
-                                        <li class="admin">
-                                            <span> Juwel Khan</span>
-                                        </li>
-                                    </ul><!-- /blog-page-content-tag -->
-                                    <h4 class="mb-22">
-                                        <a href="blog-details.html">Eimod condim erat id euismod</a>
-                                    </h4>
-                                    <p>Eimod te mpor incididunt ut labore et dolore ma gna aliqua. Ut enim ad minim eniam quis nostrud exercitation tempor incididunt ut labore et do lore magna aliqua. Ut eim ad minim veniam, quis nostrud exercita ...</p>
-                                    <div class="blog-page-footer mt-15 d-sm-flex align-items-center justify-content-between">
-                                        <div class="my-btn mt-15">
-                                            <a href="blog-details.html" class="btn theme-bg text-capitalize f-18 f-700">read more</a>
-                                        </div>
-                                        <div class="blog-page-social-link d-flex align-items-center justify-content-lg-end mt-25">
-                                            <span class="d-block text-uppercase pr-1 f-700 mb-0">Share :</span>
-                                            <ul class="social-link text-md-right">
-                                                <li class="d-inline-block">
-                                                    <a class="facebook-color text-center pl-10 d-inline-block transition-3" href="#"><i class="fab fa-facebook-f"></i></a>
-                                                </li>
-                                                <li class="d-inline-block">
-                                                    <a class="twitter-color text-center pl-10 d-inline-block transition-3" href="#"><i class="fab fa-twitter"></i></a>
-                                                </li>
-                                                <li class="d-inline-block">
-                                                    <a class="linkedin-color text-center pl-10 d-inline-block transition-3" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                                </li>
-                                                <li class="d-inline-block">
-                                                    <a class="theme-color text-center pl-10 d-inline-block transition-3" href="#"><i class="fad fa-share-alt"></i></a>
-                                                </li>
-                                            </ul><!-- social-link -->
-                                        </div><!-- /blog-page-social-link -->
-                                    </div>
-                                </div><!-- /blog-page1-content -->
-
-                            </div><!-- /blog-page1-content-wrapper -->
-
-                            <div class="blog-page1-content-wrapper">
-                                <img class="w-100" src="images/blog-page/blog-page1-img3.jpg" alt="image">
-
-                                <div class="blog-page1-content mt-25 mb-60">
-                                    <ul class="blog-page-content-info mb-6 d-flex align-items-center">
-                                        <li class="sub">
-                                            <span>Web Design</span>
-                                        </li>
-                                        <li><span class="pl-10 pr-10">|</span></li>
-                                        <li class="date">
-                                            <span>Jan 26, 2019</span>
-                                        </li>
-                                        <li><span class="pl-10 pr-10">|</span></li>
-                                        <li class="admin">
-                                            <span> Juwel Khan</span>
-                                        </li>
-                                    </ul><!-- /blog-page-content-tag -->
-                                    <h4 class="mb-22">
-                                        <a href="blog-details.html">Nullam condim erat lore magna</a>
-                                    </h4>
-                                    <p>Eimod te mpor incididunt ut labore et dolore ma gna aliqua. Ut enim ad minim eniam quis nostrud exercitation tempor incididunt ut labore et do lore magna aliqua. Ut eim ad minim veniam, quis nostrud exercita ...</p>
-                                    <div class="blog-page-footer mt-15 d-sm-flex align-items-center justify-content-between">
-                                        <div class="my-btn mt-15">
-                                            <a href="blog-details.html" class="btn theme-bg text-capitalize f-18 f-700">read more</a>
-                                        </div>
-                                        <div class="blog-page-social-link d-flex align-items-center justify-content-lg-end mt-25">
-                                            <span class="d-block text-uppercase pr-1 f-700 mb-0">Share :</span>
-                                            <ul class="social-link text-md-right">
-                                                <li class="d-inline-block">
-                                                    <a class="facebook-color text-center pl-10 d-inline-block transition-3" href="#"><i class="fab fa-facebook-f"></i></a>
-                                                </li>
-                                                <li class="d-inline-block">
-                                                    <a class="twitter-color text-center pl-10 d-inline-block transition-3" href="#"><i class="fab fa-twitter"></i></a>
-                                                </li>
-                                                <li class="d-inline-block">
-                                                    <a class="linkedin-color text-center pl-10 d-inline-block transition-3" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                                </li>
-                                                <li class="d-inline-block">
-                                                    <a class="theme-color text-center pl-10 d-inline-block transition-3" href="#"><i class="fad fa-share-alt"></i></a>
-                                                </li>
-                                            </ul><!-- social-link -->
-                                        </div><!-- /blog-page-social-link -->
-                                    </div>
-                                </div><!-- /blog-page1-content -->
-
-                            </div><!-- /blog-page1-content-wrapper -->
+                         
+                 
+                           
                         </div><!-- /col -->
                         <div class="col-xl-4  col-lg-4  col-md-12  col-sm-12 col-12">
                             <div class="blog-page-sidebar pl-30">
@@ -189,16 +104,16 @@
                                     <div class="row">
                                         <div class="col-xl-12  col-lg-12  col-md-12  col-sm-12 col-12">
                                             <div class="sidebar-widget blog-search-wrapper mb-65">
-                                                <h4 class="pb-20">Search <span><i class="far fa-angle-double-right"></i></span></h4>
+                                                <h4 class="pb-20">Ara <span><i class="far fa-angle-double-right"></i></span></h4>
                                                 <div class="blog-search position-relative">
-                                                    <input class="form-control" type="text" placeholder="Type to search">
+                                                    <input class="form-control" type="text" placeholder="Aramak istediğiniz nedir">
                                                     <a class="position-absolute theme-bg h-100 right-0 top-0 text-center pt-3 pb-3" href="#"><span class="search-icon white-color"><i class="far fa-search"></i></span></a>
                                                 </div>
                                             </div><!-- /sidebar-widget -->
                                         </div><!-- /col -->
                                         <div class="col-xl-12  col-lg-12  col-md-6  col-sm-12 col-12">
                                             <div class="sidebar-widget mb-65">
-                                                <h4 class="pb-22">Recent Posts <span><i class="far fa-angle-double-right"></i></span></h4>
+                                                <h4 class="pb-22">Son gönderiler <span><i class="far fa-angle-double-right"></i></span></h4>
                                                 <ul class="recent-post">
                                                     <li class="d-flex mb-20">
                                                         <a href="blog-details.html"><img src="images/blog-page/blog-page1-rp-img1.jpg" alt="blog"></a>
@@ -350,6 +265,6 @@
             </div>
             <!-- banner-area-end  -->
 
-
+          
         </main>
           <?php include 'footer.php'; ?>

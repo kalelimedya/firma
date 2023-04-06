@@ -42,7 +42,7 @@
                     <div class="row justify-content-center">
                         <div class="col-xl-8  col-lg-9  col-md-10  col-sm- col- text-center">
                             <img class="mb-80" src="images/bg/404-img.png" alt="image">
-                            <h3 class="f-700">The page you are looking for doesn’t exist</h3>
+                            <h3 class="f-700">Aradığınız sayfa mevcut değil</h3>
                             <div class="row justify-content-center">
                                 <div class="col-xl-8  col-lg-9  col-md-10  col-sm- col-">
                                     <form action="#" class="error-search position-relative mt-50">

@@ -7,7 +7,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Evalo | Minimal Saas Startup and Agency HTML Template</title>
+        <title>Worth Yazılım</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Place favicon.ico in the root directory -->
@@ -26,6 +26,7 @@
         <link rel="stylesheet" href="css/default.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/responsive.css">
+		
     </head>
     <body>
         <!--[if lte IE 9]>
@@ -62,14 +63,15 @@
                                         <ul class="d-block">
                                             <li class="full-mega-menu-position"><a class="active" href="index.php">Anasayfa</a></li>
                                             <li><a href="about.php">Hakkımızda</a></li>
-                                            <li><a href="service.php">Hizmetlerimiz</a>
-                                                <!--
+                                            <li><i class="fa-caret-down"></i><a href="#">Hizmetlerimiz</a>
+                                           
                                                 <ul class="mega-menu mega-dropdown-menu white-bg ml-0">
-                                                    <li><a href="service.php">Service</a></li>
-                                                    <li><a href="login.php">Login</a></li>
+                                                    <li><a href="service.php">Hizmetlerimiz</a></li>
+                                                    <li><a href="packets.php">Paketlerimiz</a></li>
                                                 </ul>
-                                            -->
+                                     
                                             </li>
+											
                                               <!-- 
                                             <li class="full-mega-menu-position"><a href="#">pages</a>
                                              
@@ -181,9 +183,33 @@
                                 </div><!-- /main-menu -->
                             </div><!-- /col -->
                             <div class="col-xl-3  col-lg-3 col-md-6 col-sm-6 col-4">
-                                <div class="header-right d-flex align-items-center justify-content-end">
+                                <div class="header-right-left-content d-flex align-items-center justify-content-end">
+								<div class="language-area d-none d-xl-inline-block">
+                                                <ul>
+                                                    <li class="position-relative transition-3">
+                                                        <a href="#" class="language d-inline-block text-uppercase d-flex align-items-center black-color f-500">
+                                                            TR<span class="pl-1"><i class="fal fa-angle-down"></i></span>
+                                                        </a>
+                                                        <ul class="show-language z-index1 position-absolute mt-15 pt-3 pb-10 px-4 white-bg">
+                                                            <li>
+                                                                <a href="#">
+                                                                    <span class="pr-2 d-inline-block">
+                                                                        <img src="images/menu/flags/006-turkey.png" alt="image">
+                                                                    </span>
+                                                                    Turkish
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                             
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div><!-- /language -->
+											&nbsp;
+											&nbsp;
+											&nbsp;
                                     <div class="my-btn d-none d-md-block">
-                                        <a href="contact-us.php" class="btn transparent-bg text-capitalize">Get A Quote</a>
+                                        <a href="contact-us.php" class="btn transparent-bg text-capitalize">TEKLİF AL</a>
                                     </div><!-- /my-btn -->
                                     <div class="d-block d-lg-none pl-20">
                                         <a class="mobile-menubar theme-color" href="javascript:void(0);"><i class="far fa-bars"></i></a>

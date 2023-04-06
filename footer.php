@@ -7,12 +7,12 @@
                         <div class="row align-items-center">
                             <div class="col-xl-6  col-lg-9  col-md-8  col-sm-12 col-">
                                 <div class="f-heading-text">
-                                    <h3 class="f-700">Want to work with us in your next project?</h3>
+                                    <h3 class="f-700">Projenizde bizimle çalışmak ister misiniz?</h3>
                                 </div><!-- /f-logo -->
                             </div><!-- /col -->
                             <div class="col-xl-6 col-lg-3  col-md-4  col-sm-12 col- text-md-right">
                                 <div class="my-btn">
-                                    <a href="service.html" class="btn theme-bg text-capitalize f-18 f-700">Get Started</a>
+                                    <a href="service.html" class="btn theme-bg text-capitalize f-18 f-700">TEKLİF AL</a>
                                 </div><!-- /my-btn -->
                             </div><!-- /col -->
                         </div><!-- /row -->
@@ -153,6 +153,7 @@
         <script src="js/tilt.jquery.min.js"></script>
         <script src="js/aos.js"></script>
         <script src="js/plugins.js"></script>
+	    <script src="js/price-table.js"></script>
         <script src="js/jquery.meanmenu.min.js"></script>
         <script src="js/main.js"></script>
         
