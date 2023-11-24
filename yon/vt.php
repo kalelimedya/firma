@@ -4,7 +4,7 @@
 	$host="localhost";
 	$vtname="worth";
 	$username="root";
-	$password="1234";
+	$password="";
 	try {
 		$db=new pdo("mysql:host=$host;dbname=$vtname;charset=utf8",$username,$password);
 	} catch (Exception $e) {
