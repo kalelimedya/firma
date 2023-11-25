@@ -1,5 +1,8 @@
-<?php include 'header.php'; ?>
-
+<?php include 'header.php'; 
+    $id = (isset($_GET['h_id']) ? $_GET['h_id'] : '');
+    $sorgu=$db->prepare("SELECT * FROM haberler ORDER BY h_id='$id'");
+    $sorgu->execute();
+ ?>
         <main class="over-hidden">
         <div class="single-slider slider-height1 container-wrapper d-flex align-items-center z-index1" data-background="images/slider/home1-slider-bg.png">
                     <div class="container">
@@ -73,65 +76,132 @@
             </div>
             <!-- about-area-end -->
 
-            <!-- ====== home6-work-area-start ==================================== -->
-            <div class="home6-work-area home6 primary-bg position-relative pt-155 pb-115">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-xl-5  col-lg-6 col-md-12 col-sm-12 col-12">
-                            <div class="home6-work-content pb-50" data-aos="fade-right" data-aos-duration="2000"> 
-                                <div class="title">
-                                    <span class="theme-color f-700">Do faster work</span>
-                                    <h3 class="f-700">Agency that solve your daily life</h3>
+            <div class="home5-more-feature-area">
+                <div class="home5-more-feature-bg bg-no-repeat pt-160" data-background="images/bg/more-feature-bg.png">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-xl-8  col-lg-10  col-md-11  col-sm-12 col-12">
+                                <div class="title text-center">
+                                    <span class="theme-color f-700">Evalo is amazing</span>
+                                    <h4 class="f-700 mb-30">Features
+                                        Feature rich application with multiple solution</h4>
                                 </div><!-- /title -->
-                                <p class="pt-25 mb-0">Phasellus seiusmod tempor incididunt ut labore et tion ullamco laboris nisi ut aliquip ex ea commodo coin voluptate velit esse cillum</p>
-                            </div><!-- /home6-work-content -->
-                        </div><!-- /col -->
-                        <div class="col-xl-6 offset-xl-1  col-lg-6  col-md-12  col-sm-12 col-12">
-                            <div class="home6-skill-bar-area over-hidden pb-50" data-aos="fade-left" data-aos-duration="2000">
-                                <div class="progess-wrapper">
-                                    <div class="single-skill mb-30">
-                                        <div class="bar-title">
-                                            <h4 class="mb-12">UIUX Design</h4>
-                                        </div>
-                                        <div class="progress">
-                                            <div class="progress-bar" data-aos="fade-right"  data-aos-delay=".6s" data-aos-duration="1s" role="progressbar" style="width: 74%;" aria-valuenow="74"
-                                                aria-valuemin="0" aria-valuemax="100"><span>74%</span></div>
-                                        </div>
+                            </div><!-- /col -->
+                        </div><!-- /row -->
+                        <div class="row align-items-center justify-content-center home5-more-feature-wrapper mt-60">
+                            <div class="col-xl-4 col-lg-5 col-md-6 col-sm-10 col-12">
+                                <div class="home5-single-more-feature white-bg d-flex align-items-center justify-content-center pt-25 pb-25 pr-30 pl-30 mb-30">
+                                    <div class="more-feature-icon d-inline-block text-center mr-20 mt-1">
+                                        <span class="d-block">
+                                            <img src="images/icon/layers.png" alt="image">
+                                        </span>
+                                    </div><!-- /ser-icon -->
+                                    <div class="service-text">
+                                        <h6 class="f-700 mb-0">Fully Layered Design</h6>
                                     </div>
-                                    <div class="single-skill mb-30">
-                                        <div class="bar-title">
-                                            <h4 class="mb-12">Web Development</h4>
-                                        </div>
-                                        <div class="progress">
-                                            <div class="progress-bar" data-aos="fade-right"  data-aos-delay=".6s" data-aos-duration="1s" role="progressbar" style="width: 82%;" aria-valuenow="82"
-                                                aria-valuemin="0" aria-valuemax="100"><span>82%</span></div>
-                                        </div>
+                                </div><!-- /single-more-feature -->
+                            </div><!-- /col -->
+                            <div class="col-xl-4 col-lg-5 col-md-6 col-sm-10 col-12">
+                                <div class="home5-single-more-feature white-bg d-flex align-items-center justify-content-center pt-25 pb-25 pr-30 pl-30 mb-30">
+                                    <div class="more-feature-icon d-inline-block text-center mr-20 mt-1">
+                                        <span class="d-block">
+                                            <img src="images/icon/107-image.png" alt="image">
+                                        </span>
+                                    </div><!-- /ser-icon -->
+                                    <div class="service-text">
+                                        <h6 class="f-700 mb-0">Beautiful Animation</h6>
                                     </div>
-                                    <div class="single-skill mb-30">
-                                        <div class="bar-title">
-                                            <h4 class="mb-12">Marketing</h4>
-                                        </div>
-                                        <div class="progress">
-                                            <div class="progress-bar" data-aos="fade-right"  data-aos-delay=".6s" data-aos-duration="1s" role="progressbar" style="width: 63%;" aria-valuenow="63"
-                                                aria-valuemin="0" aria-valuemax="100"><span>63%</span></div>
-                                        </div>
+                                </div><!-- /single-more-feature -->
+                            </div><!-- /col -->
+                            <div class="col-xl-4 col-lg-5 col-md-6 col-sm-10 col-12">
+                                <div class="home5-single-more-feature white-bg d-flex align-items-center justify-content-center pt-25 pb-25 pr-30 pl-30 mb-30">
+                                    <div class="more-feature-icon d-inline-block text-center mr-20 mt-1">
+                                        <span class="d-block">
+                                            <img src="images/icon/110-inbox.png" alt="image">
+                                        </span>
+                                    </div><!-- /ser-icon -->
+                                    <div class="service-text">
+                                        <h6 class="f-700 mb-0">Media Management</h6>
                                     </div>
-                                    <div class="single-skill ">
-                                        <div class="bar-title">
-                                            <h4 class="mb-12">Photography</h4>
-                                        </div>
-                                        <div class="progress">
-                                            <div class="progress-bar" data-aos="fade-right"  data-aos-delay=".6s" data-aos-duration="1s" role="progressbar" style="width: 85%;" aria-valuenow="85"
-                                                aria-valuemin="0" aria-valuemax="100"><span>85%</span></div>
-                                        </div>
+                                </div><!-- /single-more-feature -->
+                            </div><!-- /col -->
+                            <div class="col-xl-4 col-lg-5 col-md-6 col-sm-10 col-12">
+                                <div class="home5-single-more-feature white-bg d-flex align-items-center justify-content-center pt-25 pb-25 pr-30 pl-30 mb-30">
+                                    <div class="more-feature-icon d-inline-block text-center mr-20 mt-1">
+                                        <span class="d-block">
+                                            <img src="images/icon/153-recycle-2.png" alt="image">
+                                        </span>
+                                    </div><!-- /ser-icon -->
+                                    <div class="service-text">
+                                        <h6 class="f-700 mb-0">Both Side Encrypted</h6>
                                     </div>
-                                </div>
-                            </div>
-                        </div>  
-                    </div><!-- /row -->
-                </div><!-- /container -->
+                                </div><!-- /single-more-feature -->
+                            </div><!-- /col -->
+                            <div class="col-xl-4 col-lg-5 col-md-6 col-sm-10 col-12">
+                                <div class="home5-single-more-feature white-bg d-flex align-items-center justify-content-center pt-25 pb-25 pr-30 pl-30 mb-30">
+                                    <div class="more-feature-icon d-inline-block text-center mr-20 mt-1">
+                                        <span class="d-block">
+                                            <img src="images/icon/169-shield.png" alt="image">
+                                        </span>
+                                    </div><!-- /ser-icon -->
+                                    <div class="service-text">
+                                        <h6 class="f-700 mb-0">Powerful Security</h6>
+                                    </div>
+                                </div><!-- /single-more-feature -->
+                            </div><!-- /col -->
+                            <div class="col-xl-4 col-lg-5 col-md-6 col-sm-10 col-12">
+                                <div class="home5-single-more-feature white-bg d-flex align-items-center justify-content-center pt-25 pb-25 pr-30 pl-30 mb-30">
+                                    <div class="more-feature-icon d-inline-block text-center mr-20 mt-1">
+                                        <span class="d-block">
+                                            <img src="images/icon/222-verified.png" alt="image">
+                                        </span>
+                                    </div><!-- /ser-icon -->
+                                    <div class="service-text">
+                                        <h6 class="f-700 mb-0">No Coding Required</h6>
+                                    </div>
+                                </div><!-- /single-more-feature -->
+                            </div><!-- /col -->
+                            <div class="col-xl-4 col-lg-5 col-md-6 col-sm-10 col-12">
+                                <div class="home5-single-more-feature white-bg d-flex align-items-center justify-content-center pt-25 pb-25 pr-30 pl-30 mb-30">
+                                    <div class="more-feature-icon d-inline-block text-center mr-20 mt-1">
+                                        <span class="d-block">
+                                            <img src="images/icon/167-gear-1.png" alt="image">
+                                        </span>
+                                    </div><!-- /ser-icon -->
+                                    <div class="service-text">
+                                        <h6 class="f-700 mb-0">Easy Customization</h6>
+                                    </div>
+                                </div><!-- /single-more-feature -->
+                            </div><!-- /col -->
+                            <div class="col-xl-4 col-lg-5 col-md-6 col-sm-10 col-12">
+                                <div class="home5-single-more-feature white-bg d-flex align-items-center justify-content-center pt-25 pb-25 pr-30 pl-30 mb-30">
+                                    <div class="more-feature-icon d-inline-block text-center mr-20 mt-1">
+                                        <span class="d-block">
+                                            <img src="images/icon/143-physics.png" alt="image">
+                                        </span>
+                                    </div><!-- /ser-icon -->
+                                    <div class="service-text">
+                                        <h6 class="f-700 mb-0">Great Support</h6>
+                                    </div>
+                                </div><!-- /single-more-feature -->
+                            </div><!-- /col -->
+                            <div class="col-xl-4 col-lg-5 col-md-6 col-sm-10 col-12">
+                                <div class="home5-single-more-feature white-bg d-flex align-items-center justify-content-center pt-25 pb-25 pr-30 pl-30 mb-30">
+                                    <div class="more-feature-icon d-inline-block text-center mr-20 mt-1">
+                                        <span class="d-block">
+                                            <img src="images/icon/028-bar.png" alt="image">
+                                        </span>
+                                    </div><!-- /ser-icon -->
+                                    <div class="service-text">
+                                        <h6 class="f-700 mb-0">Real time Analytics</h6>
+                                    </div>
+                                </div><!-- /single-more-feature -->
+                            </div><!-- /col -->
+                        </div><!-- /row -->
+                    </div><!-- /container -->
+            </div><!-- /more-feature-bg -->
             </div>
-            <!-- home6-work-area-end  -->
+            <!-- more-feature-area-end -->
 
 
             <!-- ====== portfolio-area-start
@@ -142,7 +212,7 @@
                         <div class="row">
                             <div class="col-xl-12 col-lg-12  col-md-12  col-sm-12 col-12">
                                 <div class="title text-center">
-                                    <span class="theme-color f-700 text-uppercase d-block mb-6">Portfolio</span>
+                                    <span class="theme-color f-700 text-uppercase d-block mb-6">Projelerimiz</span>
                                     <h2 class="f-700 text-uppercase">My Works</h2>
                                 </div><!-- /title -->
                             </div><!-- /col -->
@@ -1719,7 +1789,7 @@
                 </div><!-- /container -->
             </div>
             <!-- home6-testimonial-area-end  -->
-
+          
 
             <!-- ====== blog-area-start=========================================== -->
             <div class="blog-area home6 home6-blog-area pt-170 pb-140" data-aos="fade-up" data-aos-duration="2000">
@@ -1728,16 +1798,17 @@
                         <div class="col-xl-5 col-lg-6 col-md-12 col-sm-12 col-12">
                             <div class="blog-left-content mt--10 mb-70">
                                 <div class="title">
-                                    <span class="theme-color f-700">Our Blog</span>
-                                    <h4 class="f-700 mb-35">Our Latest Updates</h4>
-                                    <p>Phasellus seiusmod tempor incididunt ut labore et tion ullamco laboris nisi ut aliquip </p>
+                                    <span class="theme-color f-700">Blog</span>
+                                    <h4 class="f-700 mb-35">Son paylaşılanlar</h4>
+                                    <p> </p>
                                 </div>
                                 <div class="btn-2 d-block mt-25" data-aos="fade-up" data-aos-duration="2000">
-                                    <a href="blog-details.html" class="black-color d-inline-block  position-relative f-700 text-capitalize">Go to Blog</a>
+                                    <a href="blog.php" class="black-color d-inline-block  position-relative f-700 text-capitalize">Daha fazla</a>
                                 </div>
                             </div><!-- /blog-left-content -->
                         </div><!-- /col -->
                         <div class="col-xl-6 offset-xl-1 col-lg-6 col-md-12 col-sm-12 col-12">
+                        <?php while($sorgucek=$sorgu->fetch(PDO::FETCH_ASSOC, ))  { ?>
                             <div class="row justify-content-center">
                                 <div class="col-xl-12 col-lg-12  col-md-12 col-sm-12 col-12">
                                     <div class="single-blog position-relative mb-30">
@@ -1746,56 +1817,27 @@
                                         </div>
                                         <div class="single-blog-content position-absolute left-0 right-0 bottom-0 top-0 white-bg pt-45 pb-55 pl-50 pr-50 transition5 z-index1">
                                             <div class="d-flex align-items-center mb-10">
-                                                <h4 class="theme-color f-700 mb-0">Web Development</h4>
+                                                <h4 class="theme-color f-700 mb-0"><?php echo $sorgucek["k_isim"] ?></h4>
                                                 <span class=" pl-10 pr-10 line-height-1 mb-0">|</span>
-                                                <span class="date d-block secondary-color mb-0">February 04, 2020</span>
+                                                <span class="date d-block secondary-color mb-0"><?php echo $sorgucek["h_tarih"] ?></span>
                                             </div>
                                             <h6 class="f-700">
-                                                <a href="blog-details.html">When the musics over turnoff the light says Jim Morrison</a>
+                                                <a href="post.php?h_id=<?php echo $sorgucek['h_id']; ?>"><?php echo $sorgucek["h_baslik"] ?></a>
                                             </h6>
                                         </div>
                                     </div><!-- /single-blog -->
-                                </div><!-- /col -->
-                                <div class="col-xl-12 col-lg-12  col-md-12 col-sm-12 col-12">
-                                    <div class="single-blog position-relative mb-30">
-                                        <div class="home6-blog-img position-relative">
-                                            <img class="w-100" src="images/blog/home6-blog-img1.jpg" alt="image">
-                                        </div>
-                                        <div class="single-blog-content position-absolute left-0 right-0 bottom-0 top-0 white-bg pt-45 pb-55 pl-50 pr-50 transition5 z-index1">
-                                            <div class="d-flex align-items-center mb-10">
-                                                <h4 class="theme-color f-700 mb-0">Web Development</h4>
-                                                <span class=" pl-10 pr-10 line-height-1 mb-0">|</span>
-                                                <span class="date d-block secondary-color mb-0">February 04, 2020</span>
-                                            </div>
-                                            <h6 class="f-700">
-                                                <a href="blog-details.html">When the musics over turnoff the light says Jim Morrison</a>
-                                            </h6>
-                                        </div>
-                                    </div><!-- /single-blog -->
-                                </div><!-- /col -->
-                                <div class="col-xl-12 col-lg-12  col-md-12 col-sm-12 col-12">
-                                    <div class="single-blog position-relative mb-30">
-                                        <div class="home6-blog-img position-relative">
-                                            <img class="w-100" src="images/blog/home6-blog-img1.jpg" alt="image">
-                                        </div>
-                                        <div class="single-blog-content position-absolute left-0 right-0 bottom-0 top-0 white-bg pt-45 pb-55 pl-50 pr-50 transition5 z-index1">
-                                            <div class="d-flex align-items-center mb-10">
-                                                <h4 class="theme-color f-700 mb-0">Web Development</h4>
-                                                <span class=" pl-10 pr-10 line-height-1 mb-0">|</span>
-                                                <span class="date d-block secondary-color mb-0">February 04, 2020</span>
-                                            </div>
-                                            <h6 class="f-700">
-                                                <a href="blog-details.html">When the musics over turnoff the light says Jim Morrison</a>
-                                            </h6>
-                                        </div>
-                                    </div><!-- /single-blog -->
-                                </div><!-- /col -->
+                               
+
                             </div>
+                            <?php } ?>
                         </div><!-- /col -->
+                        
                     </div><!-- /row -->
+                   
                 </div><!-- /container -->
             </div>
+    
             <!-- blog-area-end -->
-
+            
         </main>
           <?php include 'footer.php'; ?>
