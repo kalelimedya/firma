@@ -1,7 +1,13 @@
-<?php include 'header.php'; ?>
+<?php include 'header.php';
+    $id = (isset($_GET['h_id']) ? $_GET['h_id'] : '');
+    $sorgu=$db->prepare("SELECT * FROM haberler WHERE h_id='$id'");
+    $sorgu->execute();
+ ?>
+
         <main>
+		<?php while($sorgucek=$sorgu->fetch(PDO::FETCH_ASSOC, ))  { ?>
             <!-- ======slider-area-start=========================================== -->
-            <div class="slider-area blog-details-slider-area blog-slider-overly bg-cover bg-no-repeat position-relative"  data-background="images/blog-page/blog-single3-slider-img.jpg">
+            <div class="slider-area blog-details-slider-area blog-slider-overly bg-cover bg-no-repeat position-relative"    data-background= "images/blog/<?php echo $sorgucek['h_resim'] ?>">
                 <div id="scene" class="d-none"></div>
                 <!-- /shape-slider -->
                 <div class="single-page page-height d-flex align-items-end">
@@ -9,18 +15,18 @@
                         <div class="row">
                             <div class="col-xl-11  col-lg-12  col-md-12  col-sm-12 col-12  d-flex align-items-end">
                                 <div class="page-title mt-80 pb-60">
-                                    <h3 class="text-capitalize text-white f-700 mt-10 mb-20">We want to change the world </h3>
+                                    <h3 class="text-capitalize text-white f-700 mt-10 mb-20"><?php echo $sorgucek["h_baslik"] ?></h3>
                                     <ul class="blog-page-content-info mb-6 d-flex align-items-center">
                                         <li class="sub">
-                                            <span>Web Design</span>
+                                            <span><?php echo $sorgucek["k_isim"] ?></span>
                                         </li>
                                         <li><span class="pl-10 pr-10">|</span></li>
                                         <li class="date">
-                                            <span>Jan 26, 2019</span>
+                                            <span><?php echo $sorgucek["h_tarih"] ?></span>
                                         </li>
                                         <li><span class="pl-10 pr-10">|</span></li>
                                         <li class="admin">
-                                            <span> Juwel Khan</span>
+                                            <span><?php echo $sorgucek["h_yazar"] ?></span>
                                         </li>
                                     </ul><!-- /blog-page-content-tag -->
                                 </div><!-- /page title -->
@@ -29,11 +35,11 @@
                     </div><!-- /container -->
                 <!-- </div> -->
                 </div>
-            </div>
-            <!-- slider-area-end  -->
+            </div> 
 
 
-            <!-- ====== blog-page1-area-start=========================================== -->
+         
+            <!-- slider-area-end  -->   <!-- ====== blog-page1-area-start=========================================== -->
             <div class="blog-page1-area blog-details-area blog-page mt-65 mb-120">
                 <div class="container">
                     <div class="row">
@@ -41,27 +47,11 @@
                             <div class="blog-page1-content-wrapper">
                                 <div class="blog-page1-content mb-45">
                                     <p class="pb-10">
-                                        Eimod te mpor incididunt ut labore et dolore ma gna aliqua. Ut enim ad minim eniam quis nostrud exercitation tempor incididunt ut labore et do lore magna aliqua. Ut eim ad minim veniam, quis nostrud exercita.
+                                       <?php echo substr($sorgucek["h_metin"],0,50) ?>
                                     </p>
-                                    <p>
-                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                    </p>
+                                  
 
-                                    <blockquote class="blockquote d-flex mt-50 mb-50">
-                                        <div class="blockquote-icon pr-30 d-inline-block">
-                                            <img class="d-inline-block" src="images/blog-page/quote-icon.png" alt="image">
-                                        </div>
-                                        <p class="mb-0  d-inline-block">Sed ut perspiciatis unde omnis iste natus error sit voluptatem ac cusan tium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasio beatae.</p>
-                                    </blockquote>
-
-                                    <p>
-                                        Nemo enim ipsam voluptatem quia voluptas sit asperna tur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione volup tatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam al iquam quaerat voluptatem.</p>
-                                    <p>
-                                        Fiquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-                                    </p>
-                                    <p>
-                                        Nemo enim ipsam voluptatem quia vo luptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam ali quam quaerat voluptatem.
-                                    </p>
+                                   
                                     <div class="blog-page-footer border-bottom pt-1 pb-50 d-xl-flex align-items-center justify-content-between">
                                         <div class="modal-tags d-sm-flex align-items-center pt-25">
                                             <h6 class="text-uppercase mb-0 pr-15 secondary-color3 f-700">Tags :</h6>
@@ -103,7 +93,7 @@
                                         </div><!-- /blog-page-social-link -->
                                     </div>
                                 </div><!-- /blog-page1-content -->
-
+<?php } ?>
                                 <div class="row author-post-area">
                                     <div class="col-xl-12  col-lg-12  col-md-12  col-sm-12 col-12">
                                         <div class="single-author-post">

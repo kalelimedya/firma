@@ -71,7 +71,7 @@
                                     <p><?php echo substr($sorgucek["h_metin"],0,50) ?></p>
                                     <div class="blog-page-footer mt-15 d-sm-flex align-items-center justify-content-between">
                                         <div class="my-btn mt-15">
-                                            <a href="blog-details.html" class="btn theme-bg text-capitalize f-18 f-700">devamını oku</a>
+                                            <a href="post.php?h_id=<?php echo $sorgucek['h_id']; ?>" class="btn theme-bg text-capitalize f-18 f-700">devamını oku</a>
                                         </div>
                                         <div class="blog-page-social-link d-flex align-items-center justify-content-lg-end mt-25">
                                             <span class="d-block text-uppercase pr-1 f-700 mb-0">Paylaş :</span>
