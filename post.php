@@ -47,7 +47,7 @@
                             <div class="blog-page1-content-wrapper">
                                 <div class="blog-page1-content mb-45">
                                     <p class="pb-10">
-                                       <?php echo substr($sorgucek["h_metin"],0,50) ?>
+                                       <?php echo $sorgucek["h_metin"]?>
                                     </p>
                                   
 

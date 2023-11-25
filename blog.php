@@ -111,6 +111,7 @@
                                                 </div>
                                             </div><!-- /sidebar-widget -->
                                         </div><!-- /col -->
+										
                                         <div class="col-xl-12  col-lg-12  col-md-6  col-sm-12 col-12">
                                             <div class="sidebar-widget mb-65">
                                                 <h4 class="pb-22">Son gönderiler <span><i class="far fa-angle-double-right"></i></span></h4>
